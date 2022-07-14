@@ -1,0 +1,10 @@
+D:\prjTest\SimLibrary\Sim.Helper\bin\Debug\netcoreapp3.1\Sim.Helper.deps.json
+D:\prjTest\SimLibrary\Sim.Helper\bin\Debug\netcoreapp3.1\Sim.Helper.dll
+D:\prjTest\SimLibrary\Sim.Helper\bin\Debug\netcoreapp3.1\Sim.Helper.pdb
+D:\prjTest\SimLibrary\Sim.Helper\obj\Debug\netcoreapp3.1\Sim.Helper.csproj.AssemblyReference.cache
+D:\prjTest\SimLibrary\Sim.Helper\obj\Debug\netcoreapp3.1\Sim.Helper.GeneratedMSBuildEditorConfig.editorconfig
+D:\prjTest\SimLibrary\Sim.Helper\obj\Debug\netcoreapp3.1\Sim.Helper.AssemblyInfoInputs.cache
+D:\prjTest\SimLibrary\Sim.Helper\obj\Debug\netcoreapp3.1\Sim.Helper.AssemblyInfo.cs
+D:\prjTest\SimLibrary\Sim.Helper\obj\Debug\netcoreapp3.1\Sim.Helper.csproj.CoreCompileInputs.cache
+D:\prjTest\SimLibrary\Sim.Helper\obj\Debug\netcoreapp3.1\Sim.Helper.dll
+D:\prjTest\SimLibrary\Sim.Helper\obj\Debug\netcoreapp3.1\Sim.Helper.pdb

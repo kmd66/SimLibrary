@@ -2,7 +2,8 @@
 
 namespace Sim.Core
 {
-    public class Class1
+    public abstract class Service
     {
+
     }
 }
