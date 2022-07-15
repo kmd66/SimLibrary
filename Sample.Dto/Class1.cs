@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sim.Helper
+namespace Sample.Dto
 {
     public class Class1
     {
