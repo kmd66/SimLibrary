@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sim.Helper", "Sim.Helper\Si
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{A2C46F24-9BDA-409C-A32E-48DEEFD0015B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0ADF0924-4581-4886-B487-03940AA694CF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{0ADF0924-4581-4886-B487-03940AA694CF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{B0C70F26-882F-40C6-B2C9-63C53E362C78}"
 EndProject
@@ -38,6 +38,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Model.Dto", "Sample.Model.Dto\Sample.Model.Dto.csproj", "{92860D11-A6C5-474D-853B-DE9AE60B9419}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Model.Connector", "Sample.Model.Connector\Sample.Model.Connector.csproj", "{2B4025A3-CD38-4B4D-9282-A6DFC7BB60D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Domain", "Sample.Domain\Sample.Domain.csproj", "{AF502891-2D9B-41D5-A2D0-A717ED97A2CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,10 @@ Global
 		{2B4025A3-CD38-4B4D-9282-A6DFC7BB60D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B4025A3-CD38-4B4D-9282-A6DFC7BB60D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B4025A3-CD38-4B4D-9282-A6DFC7BB60D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF502891-2D9B-41D5-A2D0-A717ED97A2CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF502891-2D9B-41D5-A2D0-A717ED97A2CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF502891-2D9B-41D5-A2D0-A717ED97A2CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF502891-2D9B-41D5-A2D0-A717ED97A2CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{3F19DBE0-A107-4A10-B9F6-8123100E2268} = {52308018-F91E-45C1-8F2B-F94D8032BD2A}
 		{92860D11-A6C5-474D-853B-DE9AE60B9419} = {A2C46F24-9BDA-409C-A32E-48DEEFD0015B}
 		{2B4025A3-CD38-4B4D-9282-A6DFC7BB60D0} = {A2C46F24-9BDA-409C-A32E-48DEEFD0015B}
+		{AF502891-2D9B-41D5-A2D0-A717ED97A2CB} = {0ADF0924-4581-4886-B487-03940AA694CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {638F9BDD-C345-4CC2-B89B-8AFE24A65DEF}

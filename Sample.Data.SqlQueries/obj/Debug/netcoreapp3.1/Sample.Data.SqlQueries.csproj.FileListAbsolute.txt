@@ -1,0 +1,10 @@
+D:\prjTest\SimLibrary\Sample.Data.SqlQueries\bin\Debug\netcoreapp3.1\Sample.Data.SqlQueries.deps.json
+D:\prjTest\SimLibrary\Sample.Data.SqlQueries\bin\Debug\netcoreapp3.1\Sample.Data.SqlQueries.dll
+D:\prjTest\SimLibrary\Sample.Data.SqlQueries\bin\Debug\netcoreapp3.1\Sample.Data.SqlQueries.pdb
+D:\prjTest\SimLibrary\Sample.Data.SqlQueries\obj\Debug\netcoreapp3.1\Sample.Data.SqlQueries.csproj.AssemblyReference.cache
+D:\prjTest\SimLibrary\Sample.Data.SqlQueries\obj\Debug\netcoreapp3.1\Sample.Data.SqlQueries.GeneratedMSBuildEditorConfig.editorconfig
+D:\prjTest\SimLibrary\Sample.Data.SqlQueries\obj\Debug\netcoreapp3.1\Sample.Data.SqlQueries.AssemblyInfoInputs.cache
+D:\prjTest\SimLibrary\Sample.Data.SqlQueries\obj\Debug\netcoreapp3.1\Sample.Data.SqlQueries.AssemblyInfo.cs
+D:\prjTest\SimLibrary\Sample.Data.SqlQueries\obj\Debug\netcoreapp3.1\Sample.Data.SqlQueries.csproj.CoreCompileInputs.cache
+D:\prjTest\SimLibrary\Sample.Data.SqlQueries\obj\Debug\netcoreapp3.1\Sample.Data.SqlQueries.dll
+D:\prjTest\SimLibrary\Sample.Data.SqlQueries\obj\Debug\netcoreapp3.1\Sample.Data.SqlQueries.pdb
