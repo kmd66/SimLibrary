@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\prjTest\\SimLibrary\\Sample.Model\\Sample.Model.csproj",
-      "projectName": "Sample.Model",
-      "projectPath": "D:\\prjTest\\SimLibrary\\Sample.Model\\Sample.Model.csproj",
+      "projectUniqueName": "D:\\prjTest\\SimLibrary\\Sample.Model.Dto\\Sample.Model.Dto.csproj",
+      "projectName": "Sample.Model.Dto",
+      "projectPath": "D:\\prjTest\\SimLibrary\\Sample.Model.Dto\\Sample.Model.Dto.csproj",
       "packagesPath": "C:\\Users\\sidna\\.nuget\\packages\\",
-      "outputPath": "D:\\prjTest\\SimLibrary\\Sample.Model\\obj\\",
+      "outputPath": "D:\\prjTest\\SimLibrary\\Sample.Model.Dto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

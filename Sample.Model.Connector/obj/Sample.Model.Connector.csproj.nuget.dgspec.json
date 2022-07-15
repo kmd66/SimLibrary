@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\prjTest\\SimLibrary\\Sample.Model\\Sample.Model.csproj": {}
+    "D:\\prjTest\\SimLibrary\\Sample.Model.Connector\\Sample.Model.Connector.csproj": {}
   },
   "projects": {
-    "D:\\prjTest\\SimLibrary\\Sample.Model\\Sample.Model.csproj": {
+    "D:\\prjTest\\SimLibrary\\Sample.Model.Connector\\Sample.Model.Connector.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\prjTest\\SimLibrary\\Sample.Model\\Sample.Model.csproj",
-        "projectName": "Sample.Model",
-        "projectPath": "D:\\prjTest\\SimLibrary\\Sample.Model\\Sample.Model.csproj",
+        "projectUniqueName": "D:\\prjTest\\SimLibrary\\Sample.Model.Connector\\Sample.Model.Connector.csproj",
+        "projectName": "Sample.Model.Connector",
+        "projectPath": "D:\\prjTest\\SimLibrary\\Sample.Model.Connector\\Sample.Model.Connector.csproj",
         "packagesPath": "C:\\Users\\sidna\\.nuget\\packages\\",
-        "outputPath": "D:\\prjTest\\SimLibrary\\Sample.Model\\obj\\",
+        "outputPath": "D:\\prjTest\\SimLibrary\\Sample.Model.Connector\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
