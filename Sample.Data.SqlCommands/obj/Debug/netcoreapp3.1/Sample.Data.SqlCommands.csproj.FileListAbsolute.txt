@@ -1,9 +1,0 @@
-D:\prjTest\SimLibrary\Sample.Data.SqlCommands\bin\Debug\netcoreapp3.1\Sample.Data.SqlCommands.deps.json
-D:\prjTest\SimLibrary\Sample.Data.SqlCommands\bin\Debug\netcoreapp3.1\Sample.Data.SqlCommands.dll
-D:\prjTest\SimLibrary\Sample.Data.SqlCommands\bin\Debug\netcoreapp3.1\Sample.Data.SqlCommands.pdb
-D:\prjTest\SimLibrary\Sample.Data.SqlCommands\obj\Debug\netcoreapp3.1\Sample.Data.SqlCommands.GeneratedMSBuildEditorConfig.editorconfig
-D:\prjTest\SimLibrary\Sample.Data.SqlCommands\obj\Debug\netcoreapp3.1\Sample.Data.SqlCommands.AssemblyInfoInputs.cache
-D:\prjTest\SimLibrary\Sample.Data.SqlCommands\obj\Debug\netcoreapp3.1\Sample.Data.SqlCommands.AssemblyInfo.cs
-D:\prjTest\SimLibrary\Sample.Data.SqlCommands\obj\Debug\netcoreapp3.1\Sample.Data.SqlCommands.csproj.CoreCompileInputs.cache
-D:\prjTest\SimLibrary\Sample.Data.SqlCommands\obj\Debug\netcoreapp3.1\Sample.Data.SqlCommands.dll
-D:\prjTest\SimLibrary\Sample.Data.SqlCommands\obj\Debug\netcoreapp3.1\Sample.Data.SqlCommands.pdb
