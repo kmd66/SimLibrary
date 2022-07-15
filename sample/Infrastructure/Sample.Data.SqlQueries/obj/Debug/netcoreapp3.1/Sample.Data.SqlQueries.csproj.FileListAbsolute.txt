@@ -18,3 +18,6 @@ D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlQueries\obj\Debug\net
 D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlQueries\obj\Debug\netcoreapp3.1\Sample.Data.SqlQueries.csproj.CoreCompileInputs.cache
 D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlQueries\obj\Debug\netcoreapp3.1\Sample.Data.SqlQueries.dll
 D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlQueries\obj\Debug\netcoreapp3.1\Sample.Data.SqlQueries.pdb
+D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlQueries\bin\Debug\netcoreapp3.1\Sample.Data.SqlQueries.runtimeconfig.json
+D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlQueries\bin\Debug\netcoreapp3.1\Sample.Data.SqlQueries.runtimeconfig.dev.json
+D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlQueries\obj\Debug\netcoreapp3.1\Sample.Data.SqlQueries.genruntimeconfig.cache

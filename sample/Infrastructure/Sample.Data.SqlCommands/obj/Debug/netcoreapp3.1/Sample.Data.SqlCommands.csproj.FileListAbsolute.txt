@@ -17,3 +17,6 @@ D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlCommands\obj\Debug\ne
 D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlCommands\obj\Debug\netcoreapp3.1\Sample.Data.SqlCommands.csproj.CoreCompileInputs.cache
 D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlCommands\obj\Debug\netcoreapp3.1\Sample.Data.SqlCommands.dll
 D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlCommands\obj\Debug\netcoreapp3.1\Sample.Data.SqlCommands.pdb
+D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlCommands\bin\Debug\netcoreapp3.1\Sample.Data.SqlCommands.runtimeconfig.json
+D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlCommands\bin\Debug\netcoreapp3.1\Sample.Data.SqlCommands.runtimeconfig.dev.json
+D:\prjTest\SimLibrary\sample\Infrastructure\Sample.Data.SqlCommands\obj\Debug\netcoreapp3.1\Sample.Data.SqlCommands.genruntimeconfig.cache
