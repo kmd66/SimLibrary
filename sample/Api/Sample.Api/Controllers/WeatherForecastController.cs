@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Sample.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace Sample.Api.Controllers
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
+            Model.Dto.Student s = new Model.Dto.Student();
             _logger = logger;
         }
 
