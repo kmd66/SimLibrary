@@ -41,7 +41,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Model.Connector", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Model.Dto", "sample\Model\Sample.Model.Dto\Sample.Model.Dto.csproj", "{49E78576-9912-45BF-B2D4-B9E024469011}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Model.Db", "sample\Model\Sample.Model.Db\Sample.Model.Db.csproj", "{1ADE7319-CA24-4E52-9668-28419C1FB3B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Model.Data", "sample\Model\Sample.Model.Db\Sample.Model.Data.csproj", "{1ADE7319-CA24-4E52-9668-28419C1FB3B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
