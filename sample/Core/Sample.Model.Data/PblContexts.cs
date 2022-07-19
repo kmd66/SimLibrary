@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sample.Model.Db
+namespace Sample.Model.Data
 {
     //Add-Migration Update-Database
     public class PblContexts : DbContext

@@ -10,10 +10,9 @@ namespace Sample.Data.SqlQueries
     {
         public static IServiceCollection AddSqlQueriesService(this IServiceCollection services)
         {
-            services.Scan(scan => scan
-            .FromAssemblyOf<Sim.Core.Model.IDataSource>()
-            .AddClasses(classes => classes.AssignableTo<Sim.Core.Model.DataSource>())
-            .AsSelf()
+            services.Scan(scan => scan.FromCallingAssembly()
+            .AddClasses()
+            .AsMatchingInterface()
             .WithTransientLifetime());
 
             return services;

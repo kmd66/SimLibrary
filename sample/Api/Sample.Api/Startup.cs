@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Sample.Model.Db;
+using Sample.Model.Data;
 using Sample.Domain;
 using Sample.Data.SqlCommands;
 using Sample.Data.SqlQueries;

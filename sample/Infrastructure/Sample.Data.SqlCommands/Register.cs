@@ -10,6 +10,11 @@ namespace Sample.Data.SqlCommands
     {
         public static IServiceCollection AddSqlCommandService(this IServiceCollection services)
         {
+            services.Scan(scan => scan.FromCallingAssembly()
+            .AddClasses()
+            .AsMatchingInterface()
+            .WithTransientLifetime());
+
             return services;
         }
     }

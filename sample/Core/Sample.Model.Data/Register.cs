@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sample.Model.Db
+namespace Sample.Model.Data
 {
     public static class Register
     {

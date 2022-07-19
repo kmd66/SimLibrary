@@ -24,5 +24,14 @@
     <ProjectReference Include="..\..\Domain\Sample.Domain\Sample.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Sample.Core.Service">
+      <HintPath>bin\netcoreapp3.1\Sample.Core.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Sim.Core">
+      <HintPath>..\..\..\bin\netcoreapp3.1\Sim.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 
 </Project>

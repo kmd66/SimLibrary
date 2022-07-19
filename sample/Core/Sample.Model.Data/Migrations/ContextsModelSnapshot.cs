@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Sample.Model.Db;
+using Sample.Model.Data;
 
-namespace Sample.Model.Db.Migrations
+namespace Sample.Model.Data.Migrations
 {
     [DbContext(typeof(PblContexts))]
     partial class ContextsModelSnapshot : ModelSnapshot
