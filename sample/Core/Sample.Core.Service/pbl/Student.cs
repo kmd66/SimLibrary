@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sample.Core.DataSource
+namespace Sample.Core.Service
 {
-    public interface IStudentDataSource : IDataSource
+    public interface IStudentService  : IService
     {
         Task<Result<Model.Dto.Student>> GetAsync(Guid Id);
 

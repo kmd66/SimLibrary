@@ -4,20 +4,20 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sample.Domain
+namespace Sample.Data.SqlQueries
 {
     public static class Register
     {
-        public static IServiceCollection AddDomainService(this IServiceCollection services)
+        public static IServiceCollection AddSqlQueriesService(this IServiceCollection services)
         {
-
             services.Scan(scan => scan
-            .FromAssemblyOf<Sim.Core.Model.IService>()
-            .AddClasses(classes => classes.AssignableTo< Sim.Core.Model.Service> ())
+            .FromAssemblyOf<Sim.Core.Model.IDataSource>()
+            .AddClasses(classes => classes.AssignableTo<Sim.Core.Model.DataSource>())
             .AsSelf()
             .WithTransientLifetime());
 
             return services;
+
         }
     }
 }

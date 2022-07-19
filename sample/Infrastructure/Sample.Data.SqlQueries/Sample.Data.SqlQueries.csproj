@@ -25,4 +25,13 @@
     <ProjectReference Include="..\..\Core\Sample.Model.Data\Sample.Model.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Sample.Core.DataSource">
+      <HintPath>..\..\Api\Sample.Api\bin\netcoreapp3.1\Sample.Core.DataSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Sim.Core">
+      <HintPath>..\..\..\bin\netcoreapp3.1\Sim.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
