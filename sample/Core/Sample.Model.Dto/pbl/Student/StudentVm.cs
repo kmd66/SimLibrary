@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Sample.Model.Dto
 {
-    public class Student : Model
+    public class StudentVm : ListVM
     {
-        public Student() { }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime Date { get; set; }
     }
 }

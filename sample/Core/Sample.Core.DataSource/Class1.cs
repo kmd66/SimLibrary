@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sample.Model.Connector
+namespace Sample.Core.DataSource
 {
     public class Class1
     {

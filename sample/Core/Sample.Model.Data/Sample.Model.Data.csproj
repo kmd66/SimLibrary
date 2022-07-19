@@ -1,7 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\Api\Sample.Api\bin\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +18,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sample.Model.Dto\Sample.Model.Dto.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\dbo\" />
   </ItemGroup>
 
 </Project>

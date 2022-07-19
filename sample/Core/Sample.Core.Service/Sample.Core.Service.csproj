@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\Api\Sample.Api\bin\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="dbo\" />
+    <Folder Include="pbl\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.Model.Dto\Sample.Model.Dto.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Sim.Core">
+      <HintPath>..\..\..\bin\netcoreapp3.1\Sim.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

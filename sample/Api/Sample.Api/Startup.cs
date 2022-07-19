@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+.using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
@@ -6,11 +6,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Sample.Model.Db;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Sample.Model.Db;
 
 namespace Sample.Api
 {
@@ -27,7 +27,6 @@ namespace Sample.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbService(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +47,11 @@ namespace Sample.Api
             {
                 endpoints.MapControllers();
             });
+        }
+
+        public void RegisterLibrary(IServiceCollection services)
+        {
+            services.AddDbService(Configuration);
         }
     }
 }
