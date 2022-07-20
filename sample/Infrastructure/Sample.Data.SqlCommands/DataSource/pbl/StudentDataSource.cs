@@ -5,33 +5,24 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sample.Data.SqlQueries
+
+namespace Sample.Data.SqlCommands
 {
-    public class StudentDataSource : Sim.Core.Model.IDataSource, Core.DataSource.IStudentDataSource
+    public class StudentDataCommands : Sim.Core.Model.IDataSource, Core.DataSource.IStudentDataCommands
     {
         public Task<Result<Guid>> CreateAsync(Student model)
         {
-            throw new NotImplementedException();
+            return Result<Guid>.SuccessfulAsync(data: Guid.NewGuid());
         }
 
         public Task<Result> DeleteAsync(Guid Id)
         {
-            throw new NotImplementedException();
+            return Result.SuccessfulAsync();
         }
 
-        public Task<Result<Student>> GetAsync(Guid Id)
+        public Task<Result> UpdateAsync(Student model)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<Result<IEnumerable<Student>>> ListAsync(StudentVm model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Result<Guid>> UpdateAsync(Student model)
-        {
-            throw new NotImplementedException();
+            return Result.SuccessfulAsync();
         }
     }
 }

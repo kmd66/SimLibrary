@@ -22,13 +22,17 @@ namespace Sample.Model.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("pbl");
+
+            modelBuilder.Entity<Student>()
+                .HasIndex(p => p.UnicId);
         }
 
-        public DbSet<Student> Students { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer(connectionString);
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            //optionsBuilder.UseSqlServer(connectionString);
+
+        }
+        public DbSet<Student> Students { get; set; }
     }
 }

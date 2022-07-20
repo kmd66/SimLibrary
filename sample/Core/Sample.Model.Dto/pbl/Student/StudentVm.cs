@@ -6,7 +6,6 @@ namespace Sample.Model.Dto
 {
     public class StudentVm : ListVM
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string NationalCode { get; set; }
     }
 }

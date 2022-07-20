@@ -7,31 +7,16 @@ using System.Threading.Tasks;
 
 namespace Sample.Data.SqlQueries
 {
-    public class StudentDataSource : Sim.Core.Model.IDataSource, Core.DataSource.IStudentDataSource
+    public class StudentDataQueries : Sim.Core.Model.IDataSource, Core.DataSource.IStudentDataQueries
     {
-        public Task<Result<Guid>> CreateAsync(Student model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Result> DeleteAsync(Guid Id)
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<Result<Student>> GetAsync(Guid Id)
         {
-            throw new NotImplementedException();
+            return Result<Student>.SuccessfulAsync(data: new Student());
         }
 
         public Task<Result<IEnumerable<Student>>> ListAsync(StudentVm model)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<Result<Guid>> UpdateAsync(Student model)
-        {
-            throw new NotImplementedException();
+            return Result<IEnumerable<Student>>.SuccessfulAsync(data: new List<Student> { new Student() });
         }
     }
 }

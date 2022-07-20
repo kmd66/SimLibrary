@@ -19,12 +19,24 @@ namespace Sample.Api.Controllers
 
         protected readonly Core.Service.IStudentService _service;
 
-        [HttpGet]
-        public async Task<Result<Student>> Get()
-        {
-            //new Sample.Domain.StudentService().GetAsync(Guid.NewGuid());
-            //return Result<Student>.Successful();
-            return await _service.GetAsync(Guid.NewGuid());
-        }
+        [HttpPost, Route("Get")]
+        public Task<Result<Student>> Get(Guid Id)
+            => _service.GetAsync(Id);
+
+        [HttpPost, Route("List")]
+        public Task<Result<IEnumerable<Student>>> List(StudentVm model)
+            => _service.ListAsync(model);
+
+        [HttpPost, Route("Create")]
+        public Task<Result<Guid>> Create(Student model)
+            => _service.CreateAsync(model);
+
+        [HttpPost, Route("Delete")]
+        public Task<Result> Delete(Guid Id)
+            => _service.DeleteAsync(Id);
+
+        [HttpPost, Route("Update")]
+        public Task<Result<Guid>> Update(Student model)
+            => _service.UpdateAsync(model);
     }
 }

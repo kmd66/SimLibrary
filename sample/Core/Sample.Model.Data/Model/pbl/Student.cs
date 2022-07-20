@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sample.Model.Data
 {
-    public class Student : Model
+    public class Student : Sample.Model.Dto.Model
     {
         public Student() { }
 

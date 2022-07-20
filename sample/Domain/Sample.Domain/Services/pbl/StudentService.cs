@@ -1,4 +1,6 @@
-﻿using Sample.Model.Dto;
+﻿using Sample.Core.DataSource;
+using Sample.Core.Service;
+using Sample.Model.Dto;
 using Sim.Core.Model;
 using System;
 using System.Collections.Generic;
@@ -7,31 +9,42 @@ using System.Threading.Tasks;
 
 namespace Sample.Domain
 {
-    public class StudentService : Service, Core.Service.IStudentService
+    public class StudentService : Service, IStudentService
     {
-        public Task<Result<Guid>> CreateAsync(Student model)
+        public StudentService(IStudentDataCommands commands,
+            IStudentDataQueries queries)
         {
-            throw new NotImplementedException();
+            _commands = commands;
+            _queries = queries;
         }
 
-        public Task<Result> DeleteAsync(Guid Id)
+        protected readonly IStudentDataCommands _commands;
+        protected readonly IStudentDataQueries _queries;
+
+        public async Task<Result<Guid>> CreateAsync(Student model)
         {
-            throw new NotImplementedException();
+            return await  _commands.CreateAsync(model);
         }
 
-        public Task<Result<Student>> GetAsync(Guid Id)
+        public async Task<Result> DeleteAsync(Guid Id)
         {
-            throw new NotImplementedException();
+            return await _commands.DeleteAsync(Id);
         }
 
-        public Task<Result<IEnumerable<Student>>> ListAsync(StudentVm model)
+        public async Task<Result<Guid>> UpdateAsync(Student model)
         {
-            throw new NotImplementedException();
+            return Result<Guid>.Successful(data: Guid.NewGuid());
         }
 
-        public Task<Result<Guid>> UpdateAsync(Student model)
+        public async Task<Result<Student>> GetAsync(Guid Id)
         {
-            throw new NotImplementedException();
+            var t = await _queries.GetAsync(Id);
+            return await _queries.GetAsync(Id);
+        }
+
+        public async Task<Result<IEnumerable<Student>>> ListAsync(StudentVm model)
+        {
+            return await _queries.ListAsync(model);
         }
     }
 }
