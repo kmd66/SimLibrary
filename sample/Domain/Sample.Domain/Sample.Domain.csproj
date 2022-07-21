@@ -30,8 +30,4 @@
     </Reference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Model\pbl\Student\" />
-  </ItemGroup>
-
 </Project>

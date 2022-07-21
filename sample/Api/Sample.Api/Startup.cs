@@ -15,6 +15,7 @@ using Sample.Model.Data;
 using Sample.Domain;
 using Sample.Data.SqlCommands;
 using Sample.Data.SqlQueries;
+using Sim.Helper;
 
 namespace Sample.Api
 {
@@ -86,10 +87,44 @@ namespace Sample.Api
 
         public void RegisterLibrary(IServiceCollection services)
         {
+            services.AddHelperService();
             services.AddDbService(Configuration);
             services.AddDomainService();
             services.AddSqlCommandService();
             services.AddSqlQueriesService();
+
+            //services.Decorate<Sim.Core.Connector.IMapService, AutoMapperPg>();
+
+            var serviceProvider = services.BuildServiceProvider();
+
+            // When we resolve the IDecoratedService service, we'll get the following structure:
+            // OtherDecorator -> Decorator -> Decorated
+            var _mapService = serviceProvider.GetRequiredService<Sim.Core.Connector.IMapService>();
+
+            Student2 s = new Student2 { FirstName = "dd", LastName = "ww", NationalCode = "123" };
+            var t = _mapService.Map<Student1, Student2>(s);
+            t.NationalCode = "135";
+
         }
+    }
+
+    public class Student1 : Sample.Model.Dto.Model
+    {
+        public Student1() { }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string NationalCode { get; set; }
+        public DateTime Date { get; set; }
+    }
+
+    public class Student2 : Sample.Model.Dto.Model
+    {
+        public Student2() { }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string NationalCode { get; set; }
+        public DateTime Date { get; set; }
     }
 }

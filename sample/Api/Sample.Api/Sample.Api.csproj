@@ -17,6 +17,7 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.3.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.1" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
   </ItemGroup>
 
   <ItemGroup>    
@@ -30,6 +31,9 @@
     </Reference>
     <Reference Include="Sim.Core">
       <HintPath>..\..\..\bin\netcoreapp3.1\Sim.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sim.Helper">
+      <HintPath>..\..\..\bin\netcoreapp3.1\Sim.Helper.dll</HintPath>
     </Reference>
   </ItemGroup>
 

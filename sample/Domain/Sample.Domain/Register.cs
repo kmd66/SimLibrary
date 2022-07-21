@@ -4,8 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using asm = System.Reflection.Assembly;
 
-    using asm = System.Reflection.Assembly;
 namespace Sample.Domain
 {
     public static class Register
