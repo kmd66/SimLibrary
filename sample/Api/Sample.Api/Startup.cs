@@ -93,12 +93,15 @@ namespace Sample.Api
             services.AddSqlCommandService();
             services.AddSqlQueriesService();
 
+            services.AddSingleton(services);
+            ServiceProviderFactory.SetServiceProvider(services.BuildServiceProvider());
+
             //services.Decorate<Sim.Core.Connector.IMapService, AutoMapperPg>();
 
             var serviceProvider = services.BuildServiceProvider();
+            var foo = ServiceProviderFactory.GetInstance<Sim.Core.Connector.IMapService>();
+            var fo2o = ServiceProviderFactory.GetInstance<IServiceC>();
 
-            // When we resolve the IDecoratedService service, we'll get the following structure:
-            // OtherDecorator -> Decorator -> Decorated
             var _mapService = serviceProvider.GetRequiredService<Sim.Core.Connector.IMapService>();
 
             Student2 s = new Student2 { FirstName = "dd", LastName = "ww", NationalCode = "123" };
@@ -106,6 +109,9 @@ namespace Sample.Api
             t.NationalCode = "135";
 
         }
+    }
+    public interface IServiceC
+    {
     }
 
     public class Student1 : Sample.Model.Dto.Model

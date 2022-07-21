@@ -9,12 +9,6 @@ namespace Sim.Core.Model
 {
     public class BaseEntity
     {
-        public BaseEntity(IMapService mapService)
-        {
-            _mapService = mapService;
-        }
-
-        protected readonly IMapService _mapService;
 
         public Guid UnicId { get; set; }
         public int Id { get; set; }

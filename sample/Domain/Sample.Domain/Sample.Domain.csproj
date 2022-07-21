@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Sim.Helper\Sim.Helper.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Sample.Data.SqlCommands\Sample.Data.SqlCommands.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Sample.Data.SqlQueries\Sample.Data.SqlQueries.csproj" />
   </ItemGroup>

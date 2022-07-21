@@ -1,5 +1,6 @@
 ﻿using Sample.Core.DataSource;
 using Sample.Core.Service;
+using Sample.Domain.Model.pbl.Student;
 using Sample.Model.Dto;
 using Sim.Core.Model;
 using System;
@@ -23,6 +24,7 @@ namespace Sample.Domain
 
         public async Task<Result<Guid>> CreateAsync(Student model)
         {
+            StudentEntity s = new StudentEntity();
             return await  _commands.CreateAsync(model);
         }
 
