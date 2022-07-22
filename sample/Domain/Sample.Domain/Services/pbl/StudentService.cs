@@ -24,7 +24,7 @@ namespace Sample.Domain
 
         public async Task<Result<Guid>> CreateAsync(Student model)
         {
-            StudentEntity s = new StudentEntity();
+            StudentEntity s = StudentEntity.Create(model);
             return await  _commands.CreateAsync(model);
         }
 

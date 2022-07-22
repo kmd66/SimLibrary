@@ -7,7 +7,7 @@ namespace Sim.Helper
     {
         public static IServiceCollection AddHelperService(this IServiceCollection services)
         {
-            services.AddScoped<IMapService, AutoMapperPg>();
+            services.AddTransient<IMapService, AutoMapperPg>();
             return services;
         }
     }

@@ -13,7 +13,7 @@ namespace Sim.Helper
                 cfg.CreateMap<T2, T1>();
             });
             // only during development, validate your mappings; remove it before release
-            mapperConfiguration.AssertConfigurationIsValid();
+            //mapperConfiguration.AssertConfigurationIsValid();
 
             var mapper = mapperConfiguration.CreateMapper();
 

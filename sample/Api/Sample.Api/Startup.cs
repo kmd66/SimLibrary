@@ -16,6 +16,9 @@ using Sample.Domain;
 using Sample.Data.SqlCommands;
 using Sample.Data.SqlQueries;
 using Sim.Helper;
+using System.Net;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
 
 namespace Sample.Api
 {
@@ -72,7 +75,37 @@ namespace Sample.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sample.Api v1"));
             }
-
+            app.UseExceptionHandler(
+               options =>
+               {
+                   options.Run(
+                       async context =>
+                       {
+                           var e = context.Features.Get<IExceptionHandlerFeature>();
+                           if (e != null)
+                           {
+                               if (e.Error is SimException)
+                               {
+                                   context.Response.ContentType = context.Request.ContentType != null ? context.Request.ContentType : "application/json";
+                                   SimException ex = (SimException)e.Error;
+                                   context.Response.StatusCode = 200;
+                                   var err = Sim.Core.Model.Result.Failure(message: ex.Message, code: (int)ex.Status);
+                                 
+                                   //var json = Newtonsoft.Json.JsonConvert.SerializeObject(err);
+                                   var settings = new Newtonsoft.Json.JsonSerializerSettings();
+                                   settings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+                                   var json = Newtonsoft.Json.JsonConvert.SerializeObject( err, Newtonsoft.Json.Formatting.Indented, settings);
+                                   await context.Response.WriteAsync(json).ConfigureAwait(false);
+                               }
+                               else
+                               {
+                                   context.Response.ContentType = "text/html";
+                                   await context.Response.WriteAsync(e.Error.Message !=null ? e.Error.Message: "undefined error").ConfigureAwait(false);
+                               }
+                           }
+                       });
+               }
+           );
             app.UseHttpsRedirection();
 
             app.UseRouting();

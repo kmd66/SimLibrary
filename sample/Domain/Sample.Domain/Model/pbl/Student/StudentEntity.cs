@@ -1,4 +1,5 @@
-﻿using Sim.Core.Connector;
+﻿using Sample.Api;
+using Sim.Core.Connector;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,12 +8,8 @@ namespace Sample.Domain.Model.pbl.Student
 {
     class StudentEntity : BaseEntity
     {
-
-        public StudentEntity() : base()
+        private StudentEntity()  : base()
         {
-            Student2 s = new Student2 { FirstName = "dd", LastName = "ww", NationalCode = "123" };
-            var t = _mapService.Map<Student1, Student2>(s);
-            t.NationalCode = "135";
         }
 
         public string FirstName { get; private set; }
@@ -21,6 +18,7 @@ namespace Sample.Domain.Model.pbl.Student
         public DateTime Date { get; private set; }
 
 
+        [ExceptionHandling]
         public static StudentEntity Create(Sample.Model.Dto.Student model)
         {
             if (model == null)
@@ -29,9 +27,8 @@ namespace Sample.Domain.Model.pbl.Student
             if (string.IsNullOrEmpty(model.FirstName) ||
                 string.IsNullOrEmpty(model.LastName) ||
                 string.IsNullOrEmpty(model.NationalCode))
-                throw new IndexOutOfRangeException();
-
-            StudentEntity studentEntity = new StudentEntity();
+                throw new SimException(status: System.Net.HttpStatusCode.BadRequest, msg: "Bad Request");
+            StudentEntity studentEntity = New<StudentEntity, Sample.Model.Dto.Student>(model);
             //cart.Id = Guid.NewGuid();
             //cart.CustomerId = customer.Id;
 
