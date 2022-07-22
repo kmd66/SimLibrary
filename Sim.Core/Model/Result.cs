@@ -23,17 +23,17 @@ namespace Sim.Core.Model
 
         public string Message
         {
-            get => _errors == null ? null : string.Join("&&", _errors.Distinct().ToList());
+            get => _errors == null ? null : _errors.FirstOrDefault();
             set
             {
                 if (_errors == null)
                     _errors = new List<string>();
+                if (!string.IsNullOrEmpty(value))
+                {
+                    _errors.Add(value);
 
-                var messages = value.Split("&&".ToCharArray())?.ToList();
-                if (messages != null && messages.Any())
-                    _errors.AddRange(messages);
-
-                _errors = _errors.Distinct().ToList();
+                    _errors = _errors.Distinct().ToList();
+                }
             }
         }
 

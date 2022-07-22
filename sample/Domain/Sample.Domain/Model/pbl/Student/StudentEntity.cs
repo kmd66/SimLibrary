@@ -1,5 +1,5 @@
-﻿using Sample.Api;
-using Sim.Core.Connector;
+﻿using Sim.Core.Connector;
+using Sim.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,7 +18,6 @@ namespace Sample.Domain.Model.pbl.Student
         public DateTime Date { get; private set; }
 
 
-        [ExceptionHandling]
         public static StudentEntity Create(Sample.Model.Dto.Student model)
         {
             if (model == null)
@@ -27,8 +26,9 @@ namespace Sample.Domain.Model.pbl.Student
             if (string.IsNullOrEmpty(model.FirstName) ||
                 string.IsNullOrEmpty(model.LastName) ||
                 string.IsNullOrEmpty(model.NationalCode))
-                throw new SimException(status: System.Net.HttpStatusCode.BadRequest, msg: "Bad Request");
-            StudentEntity studentEntity = New<StudentEntity, Sample.Model.Dto.Student>(model);
+                throw SimException.BadRequest(msg: "Bad Request");
+
+            var studentEntity = New<StudentEntity, Sample.Model.Dto.Student>(model);
             //cart.Id = Guid.NewGuid();
             //cart.CustomerId = customer.Id;
 

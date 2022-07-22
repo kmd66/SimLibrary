@@ -75,37 +75,8 @@ namespace Sample.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sample.Api v1"));
             }
-            app.UseExceptionHandler(
-               options =>
-               {
-                   options.Run(
-                       async context =>
-                       {
-                           var e = context.Features.Get<IExceptionHandlerFeature>();
-                           if (e != null)
-                           {
-                               if (e.Error is SimException)
-                               {
-                                   context.Response.ContentType = context.Request.ContentType != null ? context.Request.ContentType : "application/json";
-                                   SimException ex = (SimException)e.Error;
-                                   context.Response.StatusCode = 200;
-                                   var err = Sim.Core.Model.Result.Failure(message: ex.Message, code: (int)ex.Status);
-                                 
-                                   //var json = Newtonsoft.Json.JsonConvert.SerializeObject(err);
-                                   var settings = new Newtonsoft.Json.JsonSerializerSettings();
-                                   settings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
-                                   var json = Newtonsoft.Json.JsonConvert.SerializeObject( err, Newtonsoft.Json.Formatting.Indented, settings);
-                                   await context.Response.WriteAsync(json).ConfigureAwait(false);
-                               }
-                               else
-                               {
-                                   context.Response.ContentType = "text/html";
-                                   await context.Response.WriteAsync(e.Error.Message !=null ? e.Error.Message: "undefined error").ConfigureAwait(false);
-                               }
-                           }
-                       });
-               }
-           );
+            SimExceptionHandling(app);
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -126,44 +97,43 @@ namespace Sample.Api
             services.AddSqlCommandService();
             services.AddSqlQueriesService();
 
-            services.AddSingleton(services);
+            //services.AddSingleton(services);
             ServiceProviderFactory.SetServiceProvider(services.BuildServiceProvider());
 
-            //services.Decorate<Sim.Core.Connector.IMapService, AutoMapperPg>();
+        }
 
-            var serviceProvider = services.BuildServiceProvider();
-            var foo = ServiceProviderFactory.GetInstance<Sim.Core.Connector.IMapService>();
-            var fo2o = ServiceProviderFactory.GetInstance<IServiceC>();
+        public IApplicationBuilder SimExceptionHandling(IApplicationBuilder app)
+        {
+            return app.UseExceptionHandler(
+               options =>
+               {
+                   options.Run(
+                       async context =>
+                       {
+                           var e = context.Features.Get<IExceptionHandlerFeature>();
+                           if (e != null)
+                           {
+                               if (e.Error is Sim.Core.Model.SimException)
+                               {
+                                   context.Response.ContentType = context.Request.ContentType != null ? context.Request.ContentType : "application/json";
+                                   Sim.Core.Model.SimException ex = (Sim.Core.Model.SimException)e.Error;
+                                   context.Response.StatusCode = 200;
 
-            var _mapService = serviceProvider.GetRequiredService<Sim.Core.Connector.IMapService>();
-
-            Student2 s = new Student2 { FirstName = "dd", LastName = "ww", NationalCode = "123" };
-            var t = _mapService.Map<Student1, Student2>(s);
-            t.NationalCode = "135";
-
+                                   var settings = new Newtonsoft.Json.JsonSerializerSettings();
+                                   settings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+                                   var json = Newtonsoft.Json.JsonConvert.SerializeObject(ex.Failure(), Newtonsoft.Json.Formatting.Indented, settings);
+                                   await context.Response.WriteAsync(json).ConfigureAwait(false);
+                               }
+                               else
+                               {
+                                   context.Response.ContentType = "text/html";
+                                   await context.Response.WriteAsync(e.Error.Message != null ? e.Error.Message : "undefined error").ConfigureAwait(false);
+                               }
+                           }
+                       });
+               }
+           );
         }
     }
-    public interface IServiceC
-    {
-    }
 
-    public class Student1 : Sample.Model.Dto.Model
-    {
-        public Student1() { }
-
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string NationalCode { get; set; }
-        public DateTime Date { get; set; }
-    }
-
-    public class Student2 : Sample.Model.Dto.Model
-    {
-        public Student2() { }
-
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string NationalCode { get; set; }
-        public DateTime Date { get; set; }
-    }
 }
