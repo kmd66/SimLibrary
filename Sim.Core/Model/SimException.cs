@@ -31,10 +31,9 @@ namespace Sim.Core.Model
             Errors = errors;
             Status = status;
         }
-        public static SimException BadRequest(string msg = "Bad Request")
-            => new SimException ( status: System.Net.HttpStatusCode.BadRequest, msg: msg);
-        public static SimException BadRequest(List<string> errors = null)
-            => new SimException(status: System.Net.HttpStatusCode.BadRequest, errors: errors);
+
+        public static SimException BadRequest(string msg = "Bad Request") => new SimException ( status: System.Net.HttpStatusCode.BadRequest, msg: msg);
+        public static SimException BadRequest(List<string> errors = null) => new SimException(status: System.Net.HttpStatusCode.BadRequest, errors: errors);
 
         public  Result Failure()
             => new Result { 
