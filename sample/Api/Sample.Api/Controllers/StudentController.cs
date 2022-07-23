@@ -31,8 +31,8 @@ namespace Sample.Api.Controllers
         public Task<Result<BaseModel>> Modify(Student model)
             => _service.ModifyAsync(model);
 
-        [HttpPost, Route("Delete")]
-        public Task<Result> Delete(Guid Id)
-            => _service.DeleteAsync(Id);
+        [HttpPost, Route("Remove")]
+        public Task<Result> Remove(Guid Id)
+            => _service.RemoveAsync(Id);
     }
 }

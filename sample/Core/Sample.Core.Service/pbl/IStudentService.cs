@@ -14,7 +14,7 @@ namespace Sample.Core.Service
 
         Task<Result<BaseModel>> ModifyAsync(Model.Dto.Student model);
 
-        Task<Result> DeleteAsync(Guid Id);
+        Task<Result> RemoveAsync(Guid Id);
 
 
     }

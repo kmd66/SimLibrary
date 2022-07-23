@@ -25,7 +25,7 @@ namespace Sample.Domain
             return await entity.ModifyAsync();
         }
 
-        public async Task<Result> DeleteAsync(Guid Id)
+        public async Task<Result> RemoveAsync(Guid Id)
         {
             var model = await _queries.GetAsync(Id);
             if (!model.Success)

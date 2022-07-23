@@ -15,7 +15,7 @@ namespace Sample.Data.SqlCommands
             return Result<BaseModel>.SuccessfulAsync(data: new BaseModel { Id = 1, UnicId = Guid.NewGuid() });
         }
 
-        public Task<Result> DeleteAsync(Guid Id)
+        public Task<Result> RemoveAsync(Guid Id)
         {
             return Result.SuccessfulAsync();
         }

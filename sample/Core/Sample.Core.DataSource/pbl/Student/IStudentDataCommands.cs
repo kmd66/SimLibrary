@@ -11,7 +11,7 @@ namespace Sample.Core.DataSource
     {
         Task<Result<BaseModel>> ModifyAsync(Student model);
 
-        Task<Result> DeleteAsync(Guid Id);
+        Task<Result> RemoveAsync(Guid Id);
 
 
     }

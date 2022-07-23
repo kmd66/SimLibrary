@@ -46,7 +46,7 @@ namespace Sample.Domain.Model.pbl.Student
         public async Task<Result> RemoveAsync()
         {
 
-            return await _commands.DeleteAsync(UnicId);
+            return await _commands.RemoveAsync(UnicId);
         }
 
     }
