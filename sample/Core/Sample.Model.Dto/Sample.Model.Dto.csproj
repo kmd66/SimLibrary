@@ -8,4 +8,10 @@
     <OutputPath>..\..\Api\Sample.Api\bin\</OutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="Sim.Core">
+      <HintPath>..\..\..\bin\netcoreapp3.1\Sim.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

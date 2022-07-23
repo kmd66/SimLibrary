@@ -12,9 +12,7 @@ namespace Sample.Core.Service
 
         Task<Result<IEnumerable<Model.Dto.Student>>> ListAsync(Model.Dto.StudentVm model);
 
-        Task<Result<Guid>> CreateAsync( Model.Dto.Student model);
-
-        Task<Result<Guid>> UpdateAsync(Model.Dto.Student model);
+        Task<Result<BaseModel>> ModifyAsync(Model.Dto.Student model);
 
         Task<Result> DeleteAsync(Guid Id);
 

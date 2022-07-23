@@ -10,17 +10,12 @@ namespace Sample.Data.SqlCommands
 {
     public class StudentDataCommands : Sim.Core.Model.IDataSource, Core.DataSource.IStudentDataCommands
     {
-        public Task<Result<Guid>> CreateAsync(Student model)
+        public Task<Result<BaseModel>> ModifyAsync(Student model)
         {
-            return Result<Guid>.SuccessfulAsync(data: Guid.NewGuid());
+            return Result<BaseModel>.SuccessfulAsync(data: new BaseModel { Id = 1, UnicId = Guid.NewGuid() });
         }
 
         public Task<Result> DeleteAsync(Guid Id)
-        {
-            return Result.SuccessfulAsync();
-        }
-
-        public Task<Result> UpdateAsync(Student model)
         {
             return Result.SuccessfulAsync();
         }

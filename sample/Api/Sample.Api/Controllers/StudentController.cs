@@ -27,16 +27,12 @@ namespace Sample.Api.Controllers
         public Task<Result<IEnumerable<Student>>> List(StudentVm model)
             => _service.ListAsync(model);
 
-        [HttpPost, Route("Create")]
-        public Task<Result<Guid>> Create(Student model)
-            => _service.CreateAsync(model);
+        [HttpPost, Route("Modify")]
+        public Task<Result<BaseModel>> Modify(Student model)
+            => _service.ModifyAsync(model);
 
         [HttpPost, Route("Delete")]
         public Task<Result> Delete(Guid Id)
             => _service.DeleteAsync(Id);
-
-        [HttpPost, Route("Update")]
-        public Task<Result<Guid>> Update(Student model)
-            => _service.UpdateAsync(model);
     }
 }

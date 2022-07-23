@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sample.Model.Dto
+namespace Sim.Core.Model
 {
-    public abstract class Model
+    public class BaseModel
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public Guid UnicId { get; set; }
     }
 }

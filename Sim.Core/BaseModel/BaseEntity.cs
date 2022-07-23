@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace Sim.Core.Model
 {
-    public class BaseEntity
+    public class BaseEntity : BaseModel
     {
-
-        public Guid UnicId { get; set; }
-        public int Id { get; set; }
-
         public bool Equals(BaseEntity? other)
         => this == other;
         public override bool Equals(object? obj)

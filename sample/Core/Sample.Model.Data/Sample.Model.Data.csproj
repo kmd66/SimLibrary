@@ -24,4 +24,10 @@
     <Folder Include="Model\dbo\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Sim.Core">
+      <HintPath>..\..\..\bin\netcoreapp3.1\Sim.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

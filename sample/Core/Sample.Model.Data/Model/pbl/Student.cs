@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Sim.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Sample.Model.Data
 {
-    public class Student : Sample.Model.Dto.Model
+    public class Student : BaseModel
     {
         public Student() { }
 

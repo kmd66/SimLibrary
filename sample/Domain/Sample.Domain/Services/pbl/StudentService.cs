@@ -12,30 +12,27 @@ namespace Sample.Domain
 {
     public class StudentService : Service, IStudentService
     {
-        public StudentService(IStudentDataCommands commands,
-            IStudentDataQueries queries)
+        public StudentService(IStudentDataQueries queries)
         {
-            _commands = commands;
             _queries = queries;
         }
 
-        protected readonly IStudentDataCommands _commands;
         protected readonly IStudentDataQueries _queries;
 
-        public async Task<Result<Guid>> CreateAsync(Student model)
+        public async Task<Result<BaseModel>> ModifyAsync(Student model)
         {
-            StudentEntity s = StudentEntity.Create(model);
-            return await  _commands.CreateAsync(model);
+            StudentEntity entity = StudentEntity.Create(model);
+            return await entity.ModifyAsync();
         }
 
         public async Task<Result> DeleteAsync(Guid Id)
         {
-            return await _commands.DeleteAsync(Id);
-        }
+            var model = await _queries.GetAsync(Id);
+            if (!model.Success)
+                return Result.Failure(message: model.Message);
 
-        public async Task<Result<Guid>> UpdateAsync(Student model)
-        {
-            return Result<Guid>.Successful(data: Guid.NewGuid());
+            StudentEntity entity = StudentEntity.Create(model.Data);
+            return await entity.RemoveAsync();
         }
 
         public async Task<Result<Student>> GetAsync(Guid Id)

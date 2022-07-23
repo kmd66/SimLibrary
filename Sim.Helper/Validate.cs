@@ -6,10 +6,11 @@ namespace Sim.Helper
 {
     public static class Validate
     {
-        public static void NullOrEmpty(this Guid identity)
+        public static bool NullOrEmpty(this Guid identity)
         {
             if (identity == null || identity == Guid.Empty)
-                throw new Exception("The GUID needs a value");
+               return true;
+            return false;
         }
     }
 }

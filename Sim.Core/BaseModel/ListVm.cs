@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sample.Model.Dto
+namespace Sim.Core.Model
 {
-    public class ListVM
+    public class BaseListVM
     {
         public int? PageSize { get; set; }
 
