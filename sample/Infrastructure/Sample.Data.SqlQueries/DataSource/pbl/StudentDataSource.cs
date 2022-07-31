@@ -1,13 +1,12 @@
 ﻿using Sample.Model.Dto;
-using Sim.Core.Model;
+using Sim.Library.Model;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Sample.Data.SqlQueries
 {
-    public class StudentDataQueries : Sim.Core.Model.IDataSource, Core.DataSource.IStudentDataQueries
+    public class StudentDataQueries : IDataSource, Core.DataSource.IStudentDataQueries
     {
         public Task<Result<Student>> GetAsync(Guid Id)
         {

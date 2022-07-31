@@ -1,4 +1,4 @@
-﻿using Sim.Core.Connector;
+﻿using Sim.Library.Connector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sim.Core.Model
+namespace Sim.Library.Model
 {
     public class SimException : Exception
     {

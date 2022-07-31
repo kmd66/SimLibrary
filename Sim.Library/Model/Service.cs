@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sim.Core.Model
+namespace Sim.Library.Model
 {
     public abstract class Service
     {

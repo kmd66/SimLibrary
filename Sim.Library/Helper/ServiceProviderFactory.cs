@@ -2,12 +2,8 @@
 using System;
 using System.Linq;
 
-namespace Sim.Helper
+namespace Sim.Library.Helper
 {
-    public interface ISimServiceCollection : IServiceCollection
-    {
-        T GetRequiredService<T>();
-    }
     public static class ServiceProviderFactory
     {
         public static IServiceProvider ServiceProvider { get; private set; }
@@ -24,5 +20,9 @@ namespace Sim.Helper
 
             return default(T);
         }
+
+        //public void SetServiceProvider(IServiceProvider serviceProvider) => _SetServiceProvider(serviceProvider);
+
+        //public T GetInstance<T>() => _GetInstance<T>();
     }
 }

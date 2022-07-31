@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Sim.Core">
-      <HintPath>..\..\..\bin\netcoreapp3.1\Sim.Core.dll</HintPath>
+    <Reference Include="Sim.Library">
+      <HintPath>..\..\..\bin\netcoreapp3.1\Sim.Library.dll</HintPath>
     </Reference>
   </ItemGroup>
 

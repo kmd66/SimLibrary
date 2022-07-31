@@ -40,22 +40,22 @@ namespace Sample.Domain
             //.AsImplementedInterfaces()
             //.WithTransientLifetime());
 
-            var svcInterfaces = asm.GetAssembly(typeof(Sim.Core.Model.IService))
-                          .GetTypes();
+            //var svcInterfaces = asm.GetAssembly(typeof(Sim.Core.Model.IService))
+            //              .GetTypes();
 
-            var svcClasses = asm.GetAssembly(typeof(Sim.Core.Model.Service))
-                             .GetTypes();
+            //var svcClasses = asm.GetAssembly(typeof(Sim.Core.Model.Service))
+            //                 .GetTypes();
             services.Scan(scan => scan.FromCallingAssembly()                    
             .AddClasses()
             .AsMatchingInterface()
             .WithTransientLifetime());
 
-            foreach (var s in svcInterfaces)
-            {
-            }
-            foreach (var s in svcClasses)
-            {
-            }
+            //foreach (var s in svcInterfaces)
+            //{
+            //}
+            //foreach (var s in svcClasses)
+            //{
+            //}
             return services;
         }
     }

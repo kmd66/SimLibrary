@@ -1,7 +1,5 @@
-﻿using Sim.Core.Model;
+﻿using Sim.Library.BaseModel;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Sample.Model.Data
 {

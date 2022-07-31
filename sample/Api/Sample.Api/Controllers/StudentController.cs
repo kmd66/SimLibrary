@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Sample.Model.Dto;
-using Sim.Core.Model;
+using Sim.Library.BaseModel;
+using Sim.Library.Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Sample.Api.Controllers

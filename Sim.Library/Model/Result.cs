@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sim.Core.Model
+namespace Sim.Library.Model
 {
     public class Result
     {

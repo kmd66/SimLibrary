@@ -1,14 +1,13 @@
 ﻿using Sample.Model.Dto;
-using Sim.Core.Model;
+using Sim.Library.BaseModel;
+using Sim.Library.Model;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 
 namespace Sample.Data.SqlCommands
 {
-    public class StudentDataCommands : Sim.Core.Model.IDataSource, Core.DataSource.IStudentDataCommands
+    public class StudentDataCommands : IDataSource, Core.DataSource.IStudentDataCommands
     {
         public Task<Result<BaseModel>> ModifyAsync(Student model)
         {

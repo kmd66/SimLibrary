@@ -1,7 +1,7 @@
-﻿using Sim.Core.Model;
+﻿using Sim.Library.BaseModel;
+using Sim.Library.Model;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Sample.Core.Service

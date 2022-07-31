@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sim.Core.Model
+namespace Sim.Library.Model
 {
     public interface IDataSource
     {

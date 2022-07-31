@@ -15,10 +15,10 @@ using Sample.Model.Data;
 using Sample.Domain;
 using Sample.Data.SqlCommands;
 using Sample.Data.SqlQueries;
-using Sim.Helper;
 using System.Net;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
+using Sim.Library;
 
 namespace Sample.Api
 {
@@ -98,7 +98,8 @@ namespace Sample.Api
             services.AddSqlQueriesService();
 
             //services.AddSingleton(services);
-            ServiceProviderFactory.SetServiceProvider(services.BuildServiceProvider());
+            services.SetServiceProvider(services.BuildServiceProvider());
+            //ServiceProviderFactory.SetServiceProvider(services.BuildServiceProvider());
 
         }
 
@@ -113,10 +114,10 @@ namespace Sample.Api
                            var e = context.Features.Get<IExceptionHandlerFeature>();
                            if (e != null)
                            {
-                               if (e.Error is Sim.Core.Model.SimException)
+                               if (e.Error is Sim.Library.Model.SimException)
                                {
                                    context.Response.ContentType = context.Request.ContentType != null ? context.Request.ContentType : "application/json";
-                                   Sim.Core.Model.SimException ex = (Sim.Core.Model.SimException)e.Error;
+                                   Sim.Library.Model.SimException ex = (Sim.Library.Model.SimException)e.Error;
                                    context.Response.StatusCode = 200;
 
                                    var settings = new Newtonsoft.Json.JsonSerializerSettings();

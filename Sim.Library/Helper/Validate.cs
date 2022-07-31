@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sim.Helper
+namespace Sim.Library.Helper
 {
     public static class Validate
     {

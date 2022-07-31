@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using Sim.Core.Connector;
+using Sim.Library.Connector;
 
-namespace Sim.Helper
+namespace Sim.Library.Helper
 {
     public class AutoMapperPg: IMapService
     {

@@ -1,4 +1,4 @@
-﻿namespace Sim.Core.Connector
+﻿namespace Sim.Library.Connector
 {
     public interface IMapService
     {

@@ -9,13 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.9" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Sim.Helper\Sim.Helper.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Sample.Data.SqlCommands\Sample.Data.SqlCommands.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Sample.Data.SqlQueries\Sample.Data.SqlQueries.csproj" />
   </ItemGroup>
@@ -27,8 +25,8 @@
     <Reference Include="Sample.Core.Service">
       <HintPath>..\..\Api\Sample.Api\bin\netcoreapp3.1\Sample.Core.Service.dll</HintPath>
     </Reference>
-    <Reference Include="Sim.Core">
-      <HintPath>..\..\..\bin\netcoreapp3.1\Sim.Core.dll</HintPath>
+    <Reference Include="Sim.Library">
+      <HintPath>..\..\..\bin\netcoreapp3.1\Sim.Library.dll</HintPath>
     </Reference>
   </ItemGroup>
 

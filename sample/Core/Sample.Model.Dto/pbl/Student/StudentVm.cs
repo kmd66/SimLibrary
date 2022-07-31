@@ -1,7 +1,4 @@
-﻿using Sim.Core.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Sim.Library.BaseModel;
 
 namespace Sample.Model.Dto
 {

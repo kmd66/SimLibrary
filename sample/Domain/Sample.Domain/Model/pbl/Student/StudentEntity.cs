@@ -1,21 +1,13 @@
 ﻿using Sample.Core.DataSource;
-using Sim.Core.Connector;
-using Sim.Core.Model;
+using Sim.Library.BaseModel;
+using Sim.Library.Model;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Sample.Domain.Model.pbl.Student
 {
-    class StudentEntity : BaseEntity
+    class StudentEntity : BaseEntity<IStudentDataCommands>
     {
-        private StudentEntity(IStudentDataCommands commands)  : base()
-        {
-            _commands = commands;
-        }
-        protected readonly IStudentDataCommands _commands;
-
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public string NationalCode { get; private set; }
