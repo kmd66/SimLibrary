@@ -10,14 +10,11 @@ using System.Threading.Tasks;
 
 namespace Sample.Domain
 {
-    public class StudentService : Service, IStudentService
+    public class StudentService : Service<IStudentDataQueries>, IStudentService
     {
-        public StudentService(IStudentDataQueries queries)
+        public StudentService() : base()
         {
-            _queries = queries;
         }
-
-        protected readonly IStudentDataQueries _queries;
 
         public async Task<Result<BaseModel>> ModifyAsync(Student model)
         {

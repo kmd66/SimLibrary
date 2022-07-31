@@ -10,14 +10,11 @@ namespace Sample.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class StudentController
+    public class StudentController : BaseController<Core.Service.IStudentService>
     {
-        public StudentController(Core.Service.IStudentService service)
+        public StudentController() : base()
         {
-            _service = service;
         }
-
-        protected readonly Core.Service.IStudentService _service;
 
         [HttpPost, Route("Get")]
         public Task<Result<Student>> Get(Guid Id)

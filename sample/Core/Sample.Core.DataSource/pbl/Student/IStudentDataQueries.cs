@@ -1,15 +1,10 @@
-﻿using Sim.Library.Model;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using Sample.Model.Dto;
+using Sim.Library.Model;
 
 namespace Sample.Core.DataSource
 {
-    public interface IStudentDataQueries : IDataSource
+    public interface IStudentDataQueries : IDataSourceQueries<Student, StudentVm>
     {
-        Task<Result<Model.Dto.Student>> GetAsync(Guid Id);
-
-        Task<Result<IEnumerable<Model.Dto.Student>>> ListAsync(Model.Dto.StudentVm model);
 
     }
 }
